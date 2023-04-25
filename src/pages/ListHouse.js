@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import db from "../firestoreConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import RoomIcon from '@mui/icons-material/Room';
 
 export default function ListHouse(params) {
   const navigate = useNavigate();
@@ -64,7 +65,17 @@ export default function ListHouse(params) {
       </Box>
       <div>
         {items.map((item) => {
-          return <div key={item.id}>{item.id}</div>;
+          return <div key={item.id} className="list-house-component">
+            <div className="list-house-item">
+              <img src={item.images[0]}/>
+            </div>
+            <div className="list-house-item">
+              <h3>{item.title}</h3>
+              <p><RoomIcon className="list-house-item-icon"/>{item.subLocation}</p>
+              <h3>{item.price}</h3>
+            </div>
+
+          </div>;
         })}
       </div>
     </ThemeProvider>

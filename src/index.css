@@ -1,0 +1,22 @@
+.carousal-img{
+    padding-top: 3px;
+    width: 100vw;
+    height: 60vh;
+}
+.services-flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.services-flex-item{
+    width: 15%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 1rem;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+}
